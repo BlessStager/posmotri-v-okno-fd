@@ -16,6 +16,9 @@ html {
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   background-color: #1b1919;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 h1,
@@ -50,12 +53,6 @@ ol {
   background-color: #D9D9D9;
 }
 
-.page {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .content {
   display: flex;
   align-items: end;
@@ -81,6 +78,7 @@ ol {
   display: flex;
   align-items: start;
   justify-content: space-between;
+  gap: 40px;
 }
 
 .visually-hidden {
@@ -134,7 +132,7 @@ ol {
   border-left: 0;
   border-right: 0;
   color: #fff;
-  background-color: transparent;
+  background-color: inherit;
   appearance: none;
   width: 225px;
 }
@@ -175,7 +173,8 @@ ol {
   color: #fff;
   background-color: transparent;
   cursor: pointer;
-  height: 34px;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 .button:hover {
@@ -196,17 +195,18 @@ ol {
 }
 
 .search-form__submit-button {
-  width: 194px;
+  width: 100%;
   align-self: end;
 }
 
 .more-button {
-  width: 390px;
+  width: calc(100% - 5px);
 }
 
+/* Уменьшил отступ для визуального совпадения с макетом*/
 .content__details {
   display: grid;
-  gap: 26px;
+  gap: 16px;
   width: 100%;
   height: 100%;
 }
@@ -232,7 +232,6 @@ ol {
 .content__list-container {
   height: 298px;
   overflow-y: auto;
-  overflow-x: hidden;
   display: grid;
   gap: 30px;
   position: relative;
@@ -242,6 +241,7 @@ ol {
   padding-top: 2px;
   padding-left: 3px;
   padding-right: 3px;
+  width: calc(100% - 6px);
 }
 
 .content__card-link {
@@ -259,7 +259,8 @@ ol {
 }
 
 .content__card-link:hover {
-  text-decoration: underline;
+  text-decoration-line: underline;
+  text-decoration-thickness: 2px;
 }
 
 .content__card-link:focus {
